@@ -1,0 +1,66 @@
+.login-background {
+    background: black;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gradient {
+    &::before , &::after {
+        content: "";
+        position: fixed;
+        bottom: 0;
+        width: 50%;
+        height: 70%;
+        backdrop-filter: blur(10px);
+    }
+    &::before{ 
+        left: 0;
+        background: radial-gradient(
+            ellipse at bottom left,
+            rgba(255, 1, 1, 0.3) 0%,
+            rgba(255, 1, 1, 0.2) 0%,
+            rgba(255, 1, 1, 0.1) 25%,
+            transparent 70%
+          );
+    }
+    &::after{ 
+        right: 0;
+        background: radial-gradient(
+            ellipse at bottom right, 
+            rgba(122, 167, 255, 0.3) 0%,
+            rgba(122, 167, 255, 0.2) 0%,
+            rgba(122, 167, 255, 0.1) 25%,
+            transparent 70%
+          );
+    }
+}
+section {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width : 25rem;
+    @media screen and (max-width: 992px) {
+          width: 100%;
+    }
+
+    .card-header {
+        border: 0;
+        background-color: transparent;
+    }
+    .form-control {
+        padding: .75rem;
+    }
+}
+
+.forgot-pass-container {
+    a {
+        color: #99a4af;
+    }
+}
